@@ -1,0 +1,306 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	background-color: white;
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+.msform {
+	width: 75%;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+.msform fieldset {
+	background: rgb(204, 204, 204);
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+.msform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+/*inputs*/
+.msform input, .msform textarea {
+	padding: 15px;
+	border: 1px solid rgba(0,0,0, .05);
+	border-radius: 3px;
+	margin-bottom: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+.msform input.error, .msform textarea.error{
+	border-color: rgb(255,99,71);
+}
+/*buttons*/
+.msform .action-button {
+	width: 100px;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	transition: all .4s;
+}
+.msform .action-button:hover, .msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+.progressbar {
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	width: 60%;
+	margin: 0 auto 30px;
+}
+.progressbar li {
+	list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+.progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+	line-height: 30px;
+	display: block;
+	font-size: 15px;
+	color: #333;
+	background: rgb(204, 204, 204);
+	border-radius: 50%;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+.progressbar li:after {
+	content: block;
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+.progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: block; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+.progressbar li.active:before,  .progressbar li.active:after{
+	background: rgb(255,99,71);
+	color: white;
+}
+.vtcha{
+	max-width: 100%;
+}
+.vtcha .item-box,.vtcha .target-box{
+	width: 170px;
+	margin: 10px auto 0;
+}
+
+input.radio 
+{
+	width: auto;
+}
+
+.input_fields_wrap input{
+	width: 84%;
+}
+
+.input_fields_wrap .add_field_button{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+.input_fields_wrap .add_field_button:hover, .input_fields_wrap .add_field_button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+
+.input_fields_wrap .remove{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+
+.input_fields_wrap .remove:hover, .input_fields_wrap .remove:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+
+.input_fields_wrap1 input{
+	width: 84%;
+}
+
+.input_fields_wrap1 .add_field_button1{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+.input_fields_wrap1 .add_field_button1:hover, .input_fields_wrap1 .add_field_button1:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+
+.input_fields_wrap1 .remove{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+
+.input_fields_wrap1 .remove:hover, .input_fields_wrap1 .remove:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+
+
+.input_fields_wrap2 input{
+	width: 84%;
+}
+
+.input_fields_wrap2 .add_field_button2{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+.input_fields_wrap2 .add_field_button2:hover, .input_fields_wrap2 .add_field_button2:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+
+.input_fields_wrap2 .remove{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+
+.input_fields_wrap2 .remove:hover, .input_fields_wrap2 .remove:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+
+
+.input_fields_wrap3 input{
+	width: 84%;
+}
+
+.input_fields_wrap3 .add_field_button3{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+.input_fields_wrap3 .add_field_button3:hover, .input_fields_wrap3 .add_field_button3:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+
+.input_fields_wrap3 .remove{
+	width: 15%;
+	background: rgb(64,64,64);
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px 5px;
+	transition: all .4s;
+}
+
+
+.input_fields_wrap3 .remove:hover, .input_fields_wrap3 .remove:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px rgb(255,99,71);
+	background-color: rgb(255,99,71);
+}
+

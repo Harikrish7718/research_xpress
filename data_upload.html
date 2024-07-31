@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Data Upload</title>
+  <link rel="stylesheet" href="assets/css/style1.css">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header id="header" class="header-inner-pages">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Research XPress</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="">Search</a>
+            <ul>
+              <li><a href="#">Patents</a></li>
+              <li class="drop-down"><a href="#">Publications</a>
+                <ul>
+                  <li><a href="#">Conference Publications</a></li>
+                  <li><a href="#">Journal Publications</a></li>
+                  <li><a href="#">Journal Reviewer</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">R&D Projects</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="inner-page.html">Analysis</a></li>
+          <li><a href="data_upload.html">Upload Data</a></li>
+          <li><a href="#">Dashboard</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <!-- <div class="header-social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div> -->
+
+    </div>
+  </header><!-- End Header -->
+
+ <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="data_upload.html">Data Upload</a></li>
+        </ol>
+        <h2>Data Upload Page</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+  <!--   <section class="inner-page">
+      <div class="container">
+        <p>
+          Choose category
+        </p>
+      </div>
+    </section> -->
+
+  </main><!-- End #main -->
+
+
+<!-- partial:index.partial.html -->
+<!-- multistep form -->
+<form class="msform" method="post" name="myForm">
+	<!-- progressbar -->
+	<ul class="progressbar">
+		<li class="active">Step 1</li>
+		<li>Step 2</li>
+		<li>Step 3</li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset data-check-id="1">
+		<h3>Choose the category</h3><br>
+		<div class="fields" style="text-align:left;padding-left:30px;font-size:20px">
+			<input type="radio" class="radio" id="Publication" name="research" onclick="rd_category()">
+			<label for="Publication">Book published / Chapters contributed</label><br><br>
+			<input type="radio" class="radio" id="Patent" name="research" onclick="rd_category()">
+			<label for="Patent">Patent</label><br><br>
+			<input type="radio" class="radio" id="Conf" name="research" onclick="rd_category()">
+			<label for="Conf">International / National Conference attended</label><br><br>
+			<input type="radio" class="radio" id="WCFDP" name="research" onclick="rd_category()">
+			<label for="WCFDP">Worshop / Conference / FDP attended</label><br><br>
+			<input type="radio" class="radio" id="Journalr" name="research" onclick="rd_category()">
+			<label for="Journalr">Journal reviewer</label><br><br>
+			<input type="radio" class="radio" id="Journalp" name="research" onclick="rd_category()">
+			<label for="Journalp">Journal publication</label><br><br>
+			<input type="radio" class="radio" id="Confp" name="research" onclick="rd_category()">
+			<label for="Confp">Conference publication</label><br><br>
+			<input type="radio" class="radio" id="Project" name="research" onclick="rd_category()">
+			<label for="Project">R&D project</label><br><br>
+			<input type="radio" class="radio" id="AURecog" name="research" onclick="rd_category()">
+			<label for="AURecog">Anna University Recognized Supervisor</label><br><br>
+			<input type="radio" class="radio" id="ResSeed" name="research" onclick="rd_category()">
+			<label for="ResSeed">Research Seed Money</label><br><br>
+			<input type="radio" class="radio" id="Facilities" name="research" onclick="rd_category()">
+			<label for="Facilities">Facilities</label><br><br>
+			<h5 style="text-align:center;color:red;display:'none';" id="valid1"></h5>
+		</div>
+		<input type="reset" name="clear" class="action-button">
+		<input type="button" name="next" class="next1 action-button" value="Next" onclick="myfun1()">
+	</fieldset>
+	<fieldset data-check-id="2">
+		<h3>Fill in the details</h3><br>
+		<div class="publication" style="text-align:left">
+			Author Name<input name="publication_author" placeholder="Author">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid1a"></h6>
+			Chapter<input name="publication_chapters" placeholder="Chapters">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid1b"></h6>
+			Publisher<input name="publication_publisher" placeholder="Publisher">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid1c"></h6>
+			ISBN<input name="publication_isbn" placeholder="ISBN">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid1d"></h6>
+			Month<input name="publication_month" placeholder="Month">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid1e"></h6>
+			Year<input name="publication_year" placeholder="Year">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid1f"></h6>
+		</div>
+		<div class="patent" style="text-align:left">
+			Name of Inventor<div class="input_fields_wrap">
+				<input name="patent_faculty" placeholder="Name of Inventor">
+				<button class="add_field_button">Add Inventor</button>
+			</div>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid2a"></h6>
+			Department<input name="patent_dept" placeholder="Department">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid2b"></h6>
+			Patent Title<input name="patent_title" placeholder="Patent Title">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid2c"></h6>
+			Patent Description<input name="patent_desc" placeholder="Patent Description">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid2d"></h6>
+			Patent Application Number<input name="patent_appNo" placeholder="Patent Application Number">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid2e"></h6>
+			Patent Status<input list="pstatus" name="patent_status" placeholder="Patent Status">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid2f"></h6>
+			<datalist id="pstatus">
+				<option value="Published">
+				<option value="Granted">
+			</datalist>
+			Application Date<input type="date" name="patent_year" placeholder="Date">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid2g"></h6>
+		</div>
+		<div class="conf" style="text-align:left">
+			Name of Faculty<input name="conf_faculty" placeholder="Name of Faculty">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid3a"></h6>
+			Conference Type<input list="conf_type" name="conf_type" placeholder="Conference Type">
+			<datalist id="conf_type">
+				<option value="National">
+				<option value="International">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid3b"></h6>
+			Date<input type="date" name="conf_date" placeholder="Date">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid3c"></h6>
+			Conference Title<input name="conf_title" placeholder="Conference Title">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid3d"></h6>
+			Venue<input name="conf_venue" placeholder="Venue">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid3e"></h6>
+		</div>
+		<div class="wcfdp" style="text-align:left">
+			Name<input name="wcfdp_name" placeholder="Name">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid4a"></h6>
+			Event Type<input list="wcfdp_type" name="wcfdp_type" placeholder="Event Type">
+			<datalist id="wcfdp_type">
+				<option value="Conference">
+				<option value="Workshop">
+				<option value="FDP">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid4b"></h6>
+			Event Title<input name="wcfdp_title" placeholder="Event Title">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid4c"></h6>
+			Venue<input name="wcfdp_venue" placeholder="Venue">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid4d"></h6>
+			Date of Publication<input type="date" name="wcfdp_date" placeholder="Date">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid4e"></h6>
+		</div>
+		<div class="journalr" style="text-align:left">
+			Name of Faculty<input name="journalr_faculty" placeholder="Name of Faculty">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid5a"></h6>
+			Journal Name<input name="journalr_name" placeholder="Journal Name">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid5b"></h6>
+			Reviewer ID<input name="journalr_id" placeholder="Reviewer ID">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid5c"></h6>
+			Impact Factor<input name="journalr_ifactor" placeholder="Impact Factor">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid5d"></h6>
+		</div>
+		<div class="journalp" style="text-align:left">
+			Author Name<div class="input_fields_wrap1">
+				<input name="journalp_author" placeholder="Author Name">
+				<button class="add_field_button1">Add Author</button>
+			</div>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6a"></h6>
+			Title of the Paper<input name="journalp_title" placeholder="Title of the Paper">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6b"></h6>
+			Name of the Journal<input name="journalp_name" placeholder="Name of the Journal">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6c"></h6>
+			Volume Number<input type="number" name="journalp_vol_no" placeholder="Volume Number">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6d"></h6>
+			Issue Number<input type="number" name="journalp_issue_no" placeholder="Issue Number">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6e"></h6>
+			Month of Publication<input type="number" name="journalp_month" placeholder="Month of Publication">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6f"></h6>
+			Year of Publication<input type="number" name="journalp_year" placeholder="Year of Publication">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6g"></h6>
+			Impact Factor<input name="journalp_ifactor" placeholder="Impact Factor">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6h"></h6>
+			Indexed in Scopus?<input list="scopusInd" name="journalp_scopus_ind" placeholder="Indexed in Scopus?">
+			<datalist id="scopusInd">
+				<option value="Yes">
+				<option value="No">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6i"></h6>
+			Status<input list="status" name="journalp_status" placeholder="Status">
+			<datalist id="status">
+				<option value="Published">
+				<option value="Accepted">
+				<option value="Submitted">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid6j"></h6>
+		</div>
+		<div class="confp" style="text-align:left">
+			Author Name<div class="input_fields_wrap2">
+				<input name="confp_author" placeholder="Author Name">
+				<button class="add_field_button2">Add Author</button>
+			</div>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid7a"></h6>
+			Title of the Paper<input name="confp_title" placeholder="Title of the Paper">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid7b"></h6>
+			Name of the Conference<input name="confp_name" placeholder="Name of the Conference">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid7c"></h6>
+			Proceedings ISBN<input name="confp_isbn" placeholder="Proceedings ISBN">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid7d"></h6>
+			Indexed in Scopus?<input list="scopusInd" name="confp_scopus_ind" placeholder="Indexed in Scopus?">
+			<datalist id="scopusInd">
+				<option value="Yes">
+				<option value="No">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid7e"></h6>
+			Status<input list="status" name="confp_status" placeholder="Status">
+			<datalist id="status">
+				<option value="Published">
+				<option value="Accepted">
+				<option value="Submitted">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid7f"></h6>
+		</div>
+		<div class="proj" style="text-align:left">
+			Name of Faculty<div class="input_fields_wrap3">
+				<input name="proj_faculty" placeholder="Name of Faculty">
+				<button class="add_field_button3">Add Faculty</button>
+			</div>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8a"></h6>
+			Department<input name="proj_dept" placeholder="Department">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8b"></h6>
+			Project Name<input name="proj_name" placeholder="Project Name">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8c"></h6>
+			Sponsoring Agency<input name="proj_sponsor" placeholder="Sponsoring Agency">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8d"></h6>
+			Project Status<input list="status" name="proj_status" placeholder="Project Status">
+			<datalist id="status">
+				<option value="Approved">
+				<option value="Waiting for Approval">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8e"></h6>
+			Amount Sanctioned<input type="number" name="proj_amount" placeholder="Amount Sanctioned">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8f"></h6>
+			Duration<input type="number" name="proj_duration" placeholder="Duration">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8g"></h6>
+			Date Sanctioned<input type="date" name="proj_date" placeholder="Date">	
+			<h6 style="text-align:center;color:red;display:'none';" id="valid8h"></h6>
+		</div>
+		<div class="aurec" style="text-align:left">
+			Name of Faculty<input name="aurec_faculty" placeholder="Name of Faculty">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid9a"></h6>
+			Department<input name="aurec_dept" placeholder="Department">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid9b"></h6>
+			University Recognition Number<input type="number" name="aurec_recog_num" placeholder="University Recognition Number">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid9c"></h6>
+			No. Of Scholars Guided<input type="number" name="aurec_scholars_guided" placeholder="No. Of Scholars Guided">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid9d"></h6>
+			No. Of Scholars Under Guidance<input type="number" name="aurec_scholars_guidance" placeholder="No. Of Scholars Under Guidance">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid9e"></h6>
+		</div>
+		<div class="resseed" style="text-align:left">
+			Name of Faculty<input name="resseed_faculty" placeholder="Name of Faculty">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid10a"></h6>
+			Department<input name="resseed_dept" placeholder="Department">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid10b"></h6>
+			Research Facility<input name="resseed_facility" placeholder="Research Facility">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid10c"></h6>
+			Seed Money<input type="number" name="resseed_amount" placeholder="Seed Money">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid10d"></h6>
+			Project Status<input list="status" name="resseed_status" placeholder="Project Status">
+			<datalist id="status">
+				<option value="Approved">
+				<option value="Waiting for Approval">
+			</datalist>
+			<h6 style="text-align:center;color:red;display:'none';" id="valid10e"></h6>
+		</div>
+		<div class="facilities" style="text-align:left">
+			Department<input name="facilities_dept" placeholder="Department">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid11a"></h6>
+			Facility/Laboratory Name<input name="facilities_lab_name" placeholder="Facility/Laboratory Name">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid11b"></h6>
+			Usage<input name="facilities_usage" placeholder="Usage">
+			<h6 style="text-align:center;color:red;display:'none';" id="valid11c"></h6>
+		</div>
+		<input type="button" name="previous" class="previous action-button" value="Back">
+		<input type="reset" name="clear" class="action-button">
+		<input type="button" name="next" class="next2 action-button" value="Next" onclick="myfun2()">
+	</fieldset>
+	<fieldset data-check-id="3">
+		<h3>File Upload</h3><br>
+		<br>
+		<input type="file">
+		<br><br>
+		<input type="button" name="previous" class="previous action-button" value="Back" />
+		<input type="reset" name="clear" class="action-button">
+		<input type="submit" name="submit" class="submit action-button" value="Submit" />
+	</fieldset>
+</form>
+<!-- jQuery -->
+<script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script><!-- -->
+
+<script  src="assets/js/script1.js"></script>
+<script  src="assets/js/script2.js"></script>
+</body>
+</html>
